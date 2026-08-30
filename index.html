@@ -9,10 +9,7 @@
 </head>
 <body>
   <header>
-    <a class="brand" href="#" aria-label="SHARKER home">
-      <span class="mark" aria-hidden="true"></span>
-      <span>SHARKER</span>
-    </a>
+    <a class="brand" href="#" aria-label="SHARKER home"><span class="brand-mark"></span><span>SHARKER</span></a>
     <nav>
       <a href="#ecosystem">Database ecosystem</a>
       <a href="#how">How it works</a>
@@ -23,45 +20,16 @@
 
   <main>
     <section class="hero">
-      <div class="wrap hero-grid">
+      <img class="hero-art" src="assets/sharker-hero.jpg" alt="SHARKER brand system with logo, guardian shark, database connectors and control-plane dashboard">
+      <div class="hero-shade"></div>
+      <div class="wrap hero-content">
         <div class="hero-copy">
           <div class="eyebrow">Runtime consequence control for production databases</div>
           <h1>The last line before production.</h1>
-          <p class="lead">SHARKER sits between intent and persistence. It analyzes an operation, authorizes a bounded consequence envelope, measures the real impact, then commits or rolls back before damage becomes permanent.</p>
+          <p>SHARKER analyzes database operations, authorizes a measurable consequence envelope, observes actual impact, and commits or rolls back before damage becomes permanent.</p>
           <div class="actions">
             <a class="button primary" href="#partners">Discuss a pilot</a>
-            <a class="button secondary" href="#how">See the control loop</a>
-          </div>
-          <div class="badges">
-            <span>Observe-only pilots</span>
-            <span>MySQL / Percona first</span>
-            <span>Platform-agnostic architecture</span>
-          </div>
-        </div>
-
-        <div class="guardian" aria-label="SHARKER Guardian product visual">
-          <div class="guardian-title">
-            <span>SHARKER GUARDIAN</span>
-            <small>At the last line before production.</small>
-          </div>
-          <div class="shark-card">
-            <span class="shark-fin"></span>
-            <span class="shark-body"></span>
-            <span class="shark-stripe"></span>
-            <span class="shark-eye"></span>
-          </div>
-          <div class="checklist">
-            <span class="ok">Analyze</span>
-            <span class="ok">Authorize</span>
-            <span class="ok">Execute</span>
-            <span class="ok">Measure</span>
-            <span class="warn">Rollback</span>
-          </div>
-          <div class="terminal">
-            <code>$ sharkerctl profile use analyst</code>
-            <code>&gt; DELETE FROM orders WHERE created_at &lt; '2024-01-01'</code>
-            <code class="danger">Estimated impact: 128,432 rows</code>
-            <code class="danger">Action: ROLLBACK · limit exceeded</code>
+            <a class="button secondary" href="#how">See how it works</a>
           </div>
         </div>
       </div>
@@ -71,69 +39,53 @@
       <div class="wrap ecosystem-grid">
         <div>
           <div class="eyebrow">Part of the database ecosystem</div>
-          <h2>Built for the systems where consequence actually matters.</h2>
-          <p>Initial engineering focus is MySQL / Percona, with the control model designed for broader database and data-platform environments.</p>
+          <h2>Built for real database estates, not toy demos.</h2>
+          <p>Initial MVP focus is MySQL / Percona. The broader architecture is database and platform agnostic.</p>
         </div>
         <div class="db-cloud">
-          <span>MySQL</span>
-          <span>Percona</span>
-          <span>PostgreSQL</span>
-          <span>MariaDB</span>
-          <span>Oracle</span>
-          <span>SQL Server</span>
-          <span>Snowflake</span>
-          <span>Databricks SQL</span>
-          <span>Distributed SQL</span>
-          <span>Document DBs</span>
-          <span>Key-value stores</span>
-          <span>Service-layer ops</span>
+          <span>MySQL</span><span>Percona</span><span>MariaDB</span><span>PostgreSQL</span>
+          <span>Oracle Database</span><span>Microsoft SQL Server</span><span>Snowflake</span><span>Databricks SQL</span>
+          <span>Distributed SQL</span><span>Document databases</span><span>Key-value systems</span><span>Service-layer operations</span>
         </div>
       </div>
     </section>
 
     <section class="contrast">
       <div class="wrap compare">
-        <article>
-          <small>Access control asks</small>
-          <h2>May this operation run?</h2>
-        </article>
-        <article>
-          <small>SHARKER asks</small>
-          <h2>How much consequence may it cause?</h2>
-        </article>
+        <article><small>Access control asks</small><h2>May this operation run?</h2></article>
+        <article><small>SHARKER asks</small><h2>How much consequence may it cause?</h2></article>
       </div>
     </section>
 
     <section id="how" class="wrap section">
       <div class="section-head">
         <div class="eyebrow">What SHARKER does</div>
-        <h2>Analyze. Authorize. Execute. Measure. Decide.</h2>
+        <h2>Control. Enforce. Observe. Protect.</h2>
+        <p>Approval is bound to measurable runtime limits and verified against what actually happened.</p>
       </div>
       <div class="control-loop">
-        <article><small>01</small><h3>Analyze</h3><p>Parse and inspect the requested operation before it reaches production data.</p></article>
-        <article><small>02</small><h3>Authorize</h3><p>Bind approval to a measurable envelope: rows, cost, scope, role, timing, and policy.</p></article>
-        <article><small>03</small><h3>Execute</h3><p>Run under a controlled profile instead of handing unlimited power to a privileged actor.</p></article>
-        <article><small>04</small><h3>Measure</h3><p>Compare the actual runtime impact against what was authorized.</p></article>
-        <article class="armed"><small>05</small><h3>Commit or rollback</h3><p>Persist only when the measured consequence stays inside the envelope.</p></article>
+        <article><small>01</small><h3>Analyze</h3><p>Inspect SQL or service-layer operations before they reach production data.</p></article>
+        <article><small>02</small><h3>Authorize</h3><p>Bind permission to rows, cost, scope, role, time, and policy.</p></article>
+        <article><small>03</small><h3>Execute</h3><p>Run under a controlled profile with bounded authority.</p></article>
+        <article><small>04</small><h3>Measure</h3><p>Compare actual runtime impact against the authorized envelope.</p></article>
+        <article class="armed"><small>05</small><h3>Commit or rollback</h3><p>Persist only when the consequence stays within limits.</p></article>
       </div>
     </section>
 
-    <section class="dashboard-band">
+    <section class="product-band">
       <div class="wrap product-grid">
-        <div class="dashboard">
-          <div class="window-bar"><span></span><span></span><span></span><b>SHARKER Control Plane</b></div>
-          <div class="stats">
-            <strong>12,431<small>Authorized ops</small></strong>
-            <strong>317<small>Blocked ops</small></strong>
-            <strong>196<small>Rollbacks</small></strong>
-            <strong>0.63%<small>Policy violations</small></strong>
-          </div>
-          <div class="chart"><i></i><i></i><i></i></div>
+        <div class="terminal-card">
+          <code>$ sharkerctl profile use analyst</code>
+          <code>&gt; sql "DELETE FROM orders WHERE created_at &lt; '2024-01-01'"</code>
+          <code class="warn">Estimated impact: 128,432 rows</code>
+          <code class="bad">Action: ROLLBACK · threshold 10,000 rows exceeded</code>
+          <code>&gt; audit last 1</code>
+          <code>User: analyst · Decision: ROLLBACK · Impact: 128,432 rows</code>
         </div>
         <div>
           <div class="eyebrow">Why now</div>
           <h2>AI and automation need bounded authority, not blind trust.</h2>
-          <p>Passwords, roles, and grants are necessary, but they are not enough when humans, scripts, and agents can issue high-impact commands. SHARKER adds a runtime control layer for measurable consequence.</p>
+          <p>Roles and grants are necessary, but they do not understand consequence. SHARKER adds the missing runtime guard for privileged users, scripts, and AI-driven database workflows.</p>
         </div>
       </div>
     </section>
@@ -142,22 +94,18 @@
       <div>
         <div class="eyebrow">Design partner program</div>
         <h2>Put SHARKER against a real workload.</h2>
-        <p class="lead">We are looking for a small number of engineering teams operating production-critical database environments to shape the first pilots.</p>
+        <p>We are looking for teams running production-critical database environments to validate observe-only pilots and shape enforcement.</p>
         <a class="button primary" href="mailto:sales@sharker.dev?subject=SHARKER%20Design%20Partner">Become a design partner</a>
       </div>
       <aside>
         <h3>Initial pilot</h3>
         <p><b>Free evaluation</b><br>Design-partner scope, no public customer claims without approval.</p>
         <p><b>Observe-only by default</b><br>Start with visibility, then move toward enforcement.</p>
-        <p><b>Direct product influence</b><br>Feedback goes directly into the roadmap.</p>
+        <p><b>MySQL / Percona first</b><br>Broader engines remain in the architecture roadmap.</p>
       </aside>
     </section>
   </main>
 
-  <footer class="wrap">
-    <b>SHARKER</b>
-    <span>Consequence Control Plane</span>
-    <span>© 2026 SHARKER</span>
-  </footer>
+  <footer class="wrap"><b>SHARKER</b><span>Consequence Control Plane for Database Operations</span><span>© 2026 SHARKER</span></footer>
 </body>
 </html>
